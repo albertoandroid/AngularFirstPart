@@ -10,6 +10,7 @@ export class FormFirstComponent implements OnInit {
   status = "Form not submitted"
   defaultName = ""
   user = ""
+  displayPassword = false
 
   constructor() { }
 

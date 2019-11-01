@@ -13,3 +13,14 @@
 <button (click)="onDefaultForm()">Default Form</button>
 
 <p>{{ status }}</p>
+
+<div *ngIf="displayPassword; then showPassword; else hidePassword">
+</div>
+
+<ng-template #showPassword>
+    <p>12345678</p>
+</ng-template>
+
+<ng-template #hidePassword>
+    <p>No muestro el password</p>
+</ng-template>
