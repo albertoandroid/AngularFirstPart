@@ -11,6 +11,7 @@ export class FormFirstComponent implements OnInit {
   defaultName = ""
   user = ""
   displayPassword = false
+  lightStatus = "GREEN"
 
   constructor() { }
 

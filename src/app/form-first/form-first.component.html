@@ -24,3 +24,10 @@
 <ng-template #hidePassword>
     <p>No muestro el password</p>
 </ng-template>
+
+<div [ngSwitch]= "lightStatus">
+    <div *ngSwitchCase = "'GREEN'">VERDE</div>
+    <div *ngSwitchCase = "'RED'">ROJO</div>
+    <div *ngSwitchCase = "'YELLOW'">AMARILLO</div>
+    <div *ngSwitchDefault>ROTO</div>
+</div>
