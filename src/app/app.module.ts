@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormFirstComponent } from './form-first/form-first.component';
+import {FormsModule} from "@angular/forms"
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { FormFirstComponent } from './form-first/form-first.component';
     FormFirstComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,10 @@
 <p>form-first works!</p>
 <p>Name</p>
 <input type="text" name="" [value]="defaultName">
+
+<p>{{user}}</p>
+<input [(ngModel)]="user" type="text" name="">
+
 <p>Email</p>
 <input #email type="text" name="">
 <hr>
