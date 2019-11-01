@@ -12,4 +12,8 @@ export class FormFirstComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSendForm(){
+    alert('Enviado el formulario')
+  }
+
 }
