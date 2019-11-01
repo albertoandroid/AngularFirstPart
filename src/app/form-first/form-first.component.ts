@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FormFirstComponent implements OnInit {
 
   status = "Form not submitted"
+  defaultName = ""
 
   constructor() { }
 
@@ -16,6 +17,10 @@ export class FormFirstComponent implements OnInit {
 
   onSendForm(){
     this.status = "Form has been sent"
+  }
+
+  onDefaultForm(){
+    this.defaultName = "Alberto"
   }
 
 }
