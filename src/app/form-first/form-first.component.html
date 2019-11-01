@@ -2,9 +2,9 @@
 <p>Name</p>
 <input type="text" name="" [value]="defaultName">
 <p>Email</p>
-<input type="text" name="">
+<input #email type="text" name="">
 <hr>
-<button (click)="onSendForm()">Send Form</button>
+<button (click)="onSendForm(email.value)">Send Form</button>
 <hr>
 <button (click)="onDefaultForm()">Default Form</button>
 
