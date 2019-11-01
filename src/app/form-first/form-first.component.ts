@@ -7,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormFirstComponent implements OnInit {
 
+  status = "Form not submitted"
+
   constructor() { }
 
   ngOnInit() {
   }
 
   onSendForm(){
-    alert('Enviado el formulario')
+    this.status = "Form has been sent"
   }
 
 }
