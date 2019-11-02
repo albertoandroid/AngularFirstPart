@@ -26,11 +26,12 @@ export class FormFirstComponent implements OnInit {
   constructor(private courseService: CourseService) { }
 
   ngOnInit() {
-    this.courses = this.courseService.getCourses()
-    console.log(this.courses)
+    //this.courses = this.courseService.getCourses()
+    this.courseService.getCourses().subscribe(data=>this.courses=data)
   }
 
   onSendForm(email){
+    console.log(this.courses)
     console.log(email)
     this.status = "Form has been sent"
   }
