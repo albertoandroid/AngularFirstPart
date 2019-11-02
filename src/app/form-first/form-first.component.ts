@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { CourseService } from '../course.service';
 
 @Component({
   selector: 'app-form-first',
@@ -13,15 +14,20 @@ export class FormFirstComponent implements OnInit {
   displayPassword = false
   lightStatus = "GREEN"
   names = ['Alberto', 'Marta', 'Maria', 'Marcos']
+  
 
   //@Input() parentDataToChild
   @Input('parentDataToChild') messageFromParent
 
   @Output() childEvent = new EventEmitter();
 
-  constructor() { }
+  courses = []
+
+  constructor(private courseService: CourseService) { }
 
   ngOnInit() {
+    this.courses = this.courseService.getCourses()
+    console.log(this.courses)
   }
 
   onSendForm(email){
@@ -31,6 +37,7 @@ export class FormFirstComponent implements OnInit {
 
   onDefaultForm(){
     this.defaultName = "Alberto"
+    
   }
 
   onSendEvent(){
