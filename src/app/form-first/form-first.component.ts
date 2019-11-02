@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-form-first',
@@ -13,6 +13,9 @@ export class FormFirstComponent implements OnInit {
   displayPassword = false
   lightStatus = "GREEN"
   names = ['Alberto', 'Marta', 'Maria', 'Marcos']
+
+  //@Input() parentDataToChild
+  @Input('parentDataToChild') messageFromParent
 
   constructor() { }
 
