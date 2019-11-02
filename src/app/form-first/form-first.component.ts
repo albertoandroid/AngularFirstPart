@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-form-first',
@@ -17,6 +17,8 @@ export class FormFirstComponent implements OnInit {
   //@Input() parentDataToChild
   @Input('parentDataToChild') messageFromParent
 
+  @Output() childEvent = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
@@ -29,6 +31,10 @@ export class FormFirstComponent implements OnInit {
 
   onDefaultForm(){
     this.defaultName = "Alberto"
+  }
+
+  onSendEvent(){
+    this.childEvent.emit('Enviando evento desde hijo hasta padre')
   }
 
 }
