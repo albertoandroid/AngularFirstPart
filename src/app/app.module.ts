@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { FormFirstComponent } from './form-first/form-first.component';
 import {FormsModule} from "@angular/forms"
 import { CourseService } from './course.service';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http'
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
