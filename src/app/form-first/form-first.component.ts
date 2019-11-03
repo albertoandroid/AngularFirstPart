@@ -22,12 +22,14 @@ export class FormFirstComponent implements OnInit {
   @Output() childEvent = new EventEmitter();
 
   courses = []
+  errorMessage = ""
 
   constructor(private courseService: CourseService) { }
 
   ngOnInit() {
     //this.courses = this.courseService.getCourses()
-    this.courseService.getCourses().subscribe(data=>this.courses=data)
+    this.courseService.getCourses().subscribe(data=>this.courses=data,
+                                              error => this.errorMessage = error)
   }
 
   onSendForm(email){
